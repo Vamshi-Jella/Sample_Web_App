@@ -1,0 +1,19 @@
+#nav{
+    background-color: aqua;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    width:100%;
+}
+#nav>a{
+    text-decoration: none;
+    color:black;
+
+}
+#sortAndFilter
+{
+   display: flex; 
+   justify-content: space-around;
+   align-items: center;
+   margin-top: 3%;
+}

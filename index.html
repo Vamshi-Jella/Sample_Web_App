@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web App Home Page</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div id="nav">
+        <a href="index.html"><h3>Home</h3></a>
+        <a href="cart.html"><h3>Cart</h3></a> 
+
+    </div>
+    <div id="sortAndFilter">
+        <div>
+            <label for="sortdata">Sort by price: </label>
+            <select id="sortdata">
+             <option value="">Sort by price</option>
+             <option value="asc">Lower price</option>
+             <option value="desc">Higher price</option>
+            </select>
+        </div>
+
+       <div>
+        <label for="filterdata">Filter by category: </label>
+        <select id="filterdata">
+         <option value="">Filter by category</option>
+         <option value="laptop">Laptop</option>
+         <option value="mobile">Mobile</option>
+         <option value="head_phones">Head_Phones</option>
+         <option value="speakers">Speakers</option>
+        </select>
+       </div>
+
+        
+    </div>
+    <div id="container"></div>
+    <div id="btns">
+       
+
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
