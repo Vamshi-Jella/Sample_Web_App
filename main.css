@@ -17,3 +17,10 @@
    align-items: center;
    margin-top: 3%;
 }
+#container{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(8,1fr);
+    gap:4%;
+    border: 1px red solid ;
+}
