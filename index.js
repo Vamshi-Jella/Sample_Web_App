@@ -23,14 +23,14 @@ function displayData(data)
         let box=document.createElement("div");
         let image=document.createElement("img");
         image.src=ele.img;
-        let cat=document.createElement("h4");
-        cat.textcontent=`Category: ${ele.category}`;
-        let brand=document.createElement("h4");
-        brand.textcontent=`Brand: ${ele.brand}`;
+        let cat=document.createElement("p");
+        cat.innerText=`Category: ${ele.category}`;
+        let brand=document.createElement("p");
+        brand.innerText=`Brand: ${ele.brand}`;
         let details=document.createElement("p");
-        details.textcontent=`Details: ${ele.details}`;
-        let price=document.createElement("h4");
-        price.textcontent=`Price: ${ele.price}`;
+        details.innerText=`Details: ${ele.details}`;
+        let price=document.createElement("p");
+        price.innerText=`Price: ${ele.price}`;
         let btn=document.createElement("button");
         btn.innerText="Add to Cart";
         btn.setAttribute=("class","btn");
@@ -52,7 +52,7 @@ function displayData(data)
     
 }  
 
-let sortdata=document.getElementById("sortData");
+let sortdata=document.getElementById("sortdata");
 
 sortdata.addEventListener("change",() => {
     sortingDatabyPrice();
@@ -99,6 +99,10 @@ let primary_buttons=[
 function getbtn(text, dataId){
     let btn=document.createElement("button");
     btn.setAttribute("data-id","dataId");
+    btn.style.fontSize="20px";
+    btn.style.height="50px";
+    btn.style.height="30px";
+
     btn.innerText=text;
     btn.addEventListener("click",function(e){
         console.log(e.target.dataset.id);

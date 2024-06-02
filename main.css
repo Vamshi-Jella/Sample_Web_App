@@ -22,12 +22,26 @@
     grid-template-columns: repeat(4,1fr);
     grid-template-rows: repeat(4,1fr);
     gap:4%;
-    
+    margin: auto;
+    margin: 2%;
 }
 #container>div{
     color:black;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 10px;
+    text-align: center;
+    padding-bottom: 10%;
 }
 #container>div>img{
     height:120px;
     width:120px;
+}
+
+#btns{
+    margin-top:12%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:2%;
+    
 }
