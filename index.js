@@ -7,7 +7,6 @@ async function getData()
         let data=await res.json();
 
         console.log(data);
-        
         displayData(data);
 
     } catch (error) {
@@ -20,7 +19,7 @@ function displayData(data)
 {
     
     cont.innerHTML="";
-     data.forEach((ele) => {
+     data.data.forEach((ele) => {
         let box=document.createElement("div");
         let image=document.createElement("img");
         image.src=ele.img;
@@ -54,9 +53,11 @@ function displayData(data)
 }  
 
 let sortdata=document.getElementById("sortData");
-sortdata.addEventListener("change",function(){
+
+sortdata.addEventListener("change",() => {
     sortingDatabyPrice();
-})
+});
+
 async function sortingDatabyPrice()
 {
     try {
@@ -65,14 +66,16 @@ async function sortingDatabyPrice()
         let data=await res.json();
         displayData(data);
     } catch (error) {
-        console.log(data);
+        console.log(error);
     }
 }
+
 let filterdata=document.getElementById("filterdata");
 filterdata.addEventListener("change",()=>{
     filteringdata();
     
 })
+
 async function filteringdata()
 {
     try {
@@ -81,15 +84,18 @@ async function filteringdata()
         let data=await res.json();
         displayData(data);
     } catch (error) {
-        console.log(data);
+        console.log(error);
     }
 }
+
 let btns=document.getElementById("btns");
+
 let primary_buttons=[
     {text:'First', 'data-id':1},
     {text:'2', 'data-id':2},
     {text:'last', 'data-id':3},
 ]
+
 function getbtn(text, dataId){
     let btn=document.createElement("button");
     btn.setAttribute("data-id","dataId");
@@ -108,4 +114,5 @@ function renderbtn()
        btns.append(getbtn(item["text"],item["data-id"])); 
     } )
 }
+
 renderbtn();
